@@ -115,7 +115,15 @@ if __name__ == '__main__':
     elif sys.argv[1] == '-a':
         try:
             len_hases = len(sys.argv[2])
-            module_type = DICT_MODULE_TYPES.keys()[DICT_MODULE_TYPES.values().index(len_hases)]
+            try:
+                module_type = DICT_MODULE_TYPES.keys()[DICT_MODULE_TYPES.values().index(len_hases)]
+            except ValueError:
+                print "\n Provided hash doesn't match any of known hashes bitmap."
+                print " Correct length for hases type:"
+                for k, i in sorted(DICT_MODULE_TYPES.iteritems()):
+                    print ' -', k,':',i
+                print ''
+                sys.exit()
             if sys.argv[3] == '-c':
                 decrypter(sys.argv[1], module_type, sys.argv[2], sys.argv[4], int(sys.argv[5]), int(sys.argv[6]))
             elif sys.argv[3] == '-ac':
