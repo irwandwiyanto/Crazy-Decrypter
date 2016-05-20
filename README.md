@@ -32,13 +32,13 @@ USAGE:
      - crazy_decrypt.py -a d73d1e93a306b8230410cbe496ec84bf -ac 1 2
 ```
 
-###Example Usage
+####Example Usage
 
 ```bash
 $ python crazy_decrypt.py -m md5 2f2ec1296695a9fb3251bbc94a2e0cef -c ichp 4 4
 ```
 
-###Example Proccess
+####Example Proccess
 
 ```bash
    *** Please drink your coffee first! ***
@@ -50,7 +50,7 @@ Type Decrypt now   : md5
 Trying with        : cipp - 6f521d7e6ce002adda1358edb218f51b
 ```
 
-###Example Result
+####Example Result
 
 ```bash
 Decrypt found : chip
