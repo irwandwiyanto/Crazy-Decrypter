@@ -62,12 +62,6 @@ End time      : 06:53:06
 ##INSTALATION
 
 ```
-$ pip install crazy_decrypter
-```
-
-**OR DOWNLOAD MANUALLY FROM SOURCE, then:**
-
-```
 $ python setup.py install
 ```
 
