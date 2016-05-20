@@ -42,7 +42,7 @@ $ crazy_decrypter -a 2f2ec1296695a9fb3251bbc94a2e0cef -c ichp 4 4
 
 ```bash
    *** Please drink your coffee first! ***
-    Python Crazy Decrypter 0.0.5
+    Python Crazy Decrypter 0.0.4
 
 CTRL+C to Exit!
 Charachters to try : ichp
