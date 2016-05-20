@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
-    name                = "Python Crazy Decrypter",
+    name                = "crazy_decrypter",
+    packages            = ['crazy'],
     version             = "0.0.3",
     url                 = 'https://github.com/agusmakmun/Crazy-Decrypter/',
     download_url        = 'https://github.com/agusmakmun/Crazy-Decrypter/tarball/v0.0.3',
@@ -13,6 +14,4 @@ setup(
     author              = 'Agus Makmun (Summon Agus)',
     author_email        = 'ags@dracos-linux.id',
     keywords            = ['Crazy Decrypter', 'Python Crazy Decrypter'],
-    packages            = find_packages(),
-    scripts             = ['crazy/crazy_decrypter'],
 )
