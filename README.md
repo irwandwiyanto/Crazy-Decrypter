@@ -35,7 +35,7 @@ USAGE:
 ####Example Usage
 
 ```bash
-$ python crazy_decrypt.py -m md5 2f2ec1296695a9fb3251bbc94a2e0cef -c ichp 4 4
+$ python crazy_decrypt.py -a 2f2ec1296695a9fb3251bbc94a2e0cef -c ichp 4 4
 ```
 
 ####Example Proccess
@@ -45,9 +45,10 @@ $ python crazy_decrypt.py -m md5 2f2ec1296695a9fb3251bbc94a2e0cef -c ichp 4 4
     Python Crazy Decrypter 0.0.1
 
 CTRL+C to Exit!
+Type Decrypt has been tried: ['sha1', 'sha224']
 Charachters to try : ichp
 Type Decrypt now   : md5
-Trying with        : cipp - 6f521d7e6ce002adda1358edb218f51b
+Trying with        : ippc - 1ddae1fbbc4dcd27055140e831e2309d
 ```
 
 ####Example Result

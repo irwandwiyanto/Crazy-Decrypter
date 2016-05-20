@@ -11,7 +11,7 @@ DESCRIPTION = NAME + ''' is real crazy tool
 to decrypt md5, sha1, sha224, sha256, sha384, and sha512 with Brute Force method.'''
 
 CHRS = string.printable.replace(' \t\n\r\x0b\x0c', '')
-LIST_MODULES_TYPE = ['sha1', 'sha224', 'md5', 'sha256', 'sha384', 'sha512']
+LIST_MODULES_TYPE = ['md5', 'sha1', 'sha224', 'sha256', 'sha384', 'sha512']
 
 def print_help():
     print '\n'+NAME
