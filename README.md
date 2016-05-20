@@ -42,7 +42,7 @@ $ python crazy_decrypter.py -a 2f2ec1296695a9fb3251bbc94a2e0cef -c ichp 4 4
 
 ```bash
    *** Please drink your coffee first! ***
-    Python Crazy Decrypter 0.0.1
+    Python Crazy Decrypter 0.0.3
 
 CTRL+C to Exit!
 Type Decrypt has been tried: ['sha1', 'sha224']
@@ -60,6 +60,12 @@ End time      : 06:53:06
 ```
 
 ##INSTALATION
+
+```
+$ pip install crazy_decrypter
+```
+
+**OR DOWNLOAD MANUALLY FROM SOURCE, then:**
 
 ```
 $ python setup.py install
