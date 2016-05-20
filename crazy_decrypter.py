@@ -24,18 +24,18 @@ def print_help():
     -c  \t To try with specific charachters.
     -ac \t To try with all charachters. \n\nUSAGE:
     SPECIFIC MODULE
-     - crazy_decrypt.py -m <module_type> <hashed> -c <chars> <min_length> <max_length>
-     - crazy_decrypt.py -m md5 d73d1e93a306b8230410cbe496ec84bf -c ABC 1 2
+     - crazy_decrypter.py -m <module_type> <hashed> -c <chars> <min_length> <max_length>
+     - crazy_decrypter.py -m md5 d73d1e93a306b8230410cbe496ec84bf -c ABC 1 2
 
-     - crazy_decrypt.py -m <module_type> <hashed> -ac <min_length> <max_length>
-     - crazy_decrypt.py -m md5 d73d1e93a306b8230410cbe496ec84bf -ac 1 2
+     - crazy_decrypter.py -m <module_type> <hashed> -ac <min_length> <max_length>
+     - crazy_decrypter.py -m md5 d73d1e93a306b8230410cbe496ec84bf -ac 1 2
 
     ALL MODULES
-     - crazy_decrypt.py -a <hashed> -c <chars> <min_length> <max_length>
-     - crazy_decrypt.py -a d73d1e93a306b8230410cbe496ec84bf -c ABC 1 2
+     - crazy_decrypter.py -a <hashed> -c <chars> <min_length> <max_length>
+     - crazy_decrypter.py -a d73d1e93a306b8230410cbe496ec84bf -c ABC 1 2
 
-     - crazy_decrypt.py -a <hashed> -ac <min_length> <max_length>
-     - crazy_decrypt.py -a d73d1e93a306b8230410cbe496ec84bf -ac 1 2
+     - crazy_decrypter.py -a <hashed> -ac <min_length> <max_length>
+     - crazy_decrypter.py -a d73d1e93a306b8230410cbe496ec84bf -ac 1 2
     '''
 
 def decrypter(choice, module_type, hashed, chrs, min_length, max_length):

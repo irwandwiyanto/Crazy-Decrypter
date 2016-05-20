@@ -14,5 +14,5 @@ setup(
     author_email        = 'ags@dracos-linux.id',
     packages            = find_packages(),
     keywords            = ['Crazy Decrypter', 'Python Crazy Decrypter'],
-    scripts             = ['crazy_decrypt.py'],
+    scripts             = ['crazy_decrypter.py'],
 )
