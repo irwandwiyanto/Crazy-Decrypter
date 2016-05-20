@@ -59,7 +59,7 @@ Type Decrypt  : md5
 End time      : 06:53:06
 ```
 
-##INSTATALATION
+##INSTALATION
 
 ```
 $ python setup.py install
