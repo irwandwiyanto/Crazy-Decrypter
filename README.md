@@ -18,24 +18,24 @@ PARAMETERS:
 
 USAGE:
     SPECIFIC MODULE
-     - crazy_decrypter.py -m <module_type> <hashed> -c <chars> <min_length> <max_length>
-     - crazy_decrypter.py -m md5 d73d1e93a306b8230410cbe496ec84bf -c ABC 1 2
+     $ crazy_decrypter -m <module_type> <hashed> -c <chars> <min_length> <max_length>
+     $ crazy_decrypter -m md5 d73d1e93a306b8230410cbe496ec84bf -c ABC 1 2
 
-     - crazy_decrypter.py -m <module_type> <hashed> -ac <min_length> <max_length>
-     - crazy_decrypter.py -m md5 d73d1e93a306b8230410cbe496ec84bf -ac 1 2
+     $ crazy_decrypter -m <module_type> <hashed> -ac <min_length> <max_length>
+     $ crazy_decrypter -m md5 d73d1e93a306b8230410cbe496ec84bf -ac 1 2
 
     ALL MODULES
-     - crazy_decrypter.py -a <hashed> -c <chars> <min_length> <max_length>
-     - crazy_decrypter.py -a d73d1e93a306b8230410cbe496ec84bf -c ABC 1 2
+     $ crazy_decrypter -a <hashed> -c <chars> <min_length> <max_length>
+     $ crazy_decrypter -a d73d1e93a306b8230410cbe496ec84bf -c ABC 1 2
 
-     - crazy_decrypter.py -a <hashed> -ac <min_length> <max_length>
-     - crazy_decrypter.py -a d73d1e93a306b8230410cbe496ec84bf -ac 1 2
+     $ crazy_decrypter -a <hashed> -ac <min_length> <max_length>
+     $ crazy_decrypter -a d73d1e93a306b8230410cbe496ec84bf -ac 1 2
 ```
 
 ####Example Usage
 
 ```bash
-$ python crazy_decrypter.py -a 2f2ec1296695a9fb3251bbc94a2e0cef -c ichp 4 4
+$ crazy_decrypter -a 2f2ec1296695a9fb3251bbc94a2e0cef -c ichp 4 4
 ```
 
 ####Example Proccess
