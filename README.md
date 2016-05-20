@@ -34,7 +34,7 @@ USAGE:
 
 ###Example Usage
 
-```python
+```bash
 $ python crazy_decrypt.py -m md5 2f2ec1296695a9fb3251bbc94a2e0cef -c ichp 4 4
 ```
 
