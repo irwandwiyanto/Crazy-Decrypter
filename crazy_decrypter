@@ -11,7 +11,14 @@ DESCRIPTION = NAME + ''' is real crazy tool
 to decrypt md5, sha1, sha224, sha256, sha384, and sha512 with Brute Force method.'''
 
 CHRS = string.printable.replace(' \t\n\r\x0b\x0c', '')
-LIST_MODULES_TYPE = ['md5', 'sha1', 'sha224', 'sha256', 'sha384', 'sha512']
+DICT_MODULE_TYPES = {
+    'md5'     : 32,
+    'sha1'    : 40,
+    'sha224'  : 56,
+    'sha256'  : 64,
+    'sha384'  : 96,
+    'sha512'  : 128
+}
 
 def print_help():
     print '\n'+NAME
@@ -39,12 +46,23 @@ def print_help():
     '''
 
 def decrypter(choice, module_type, hashed, chrs, min_length, max_length):
-
-    if module_type in LIST_MODULES_TYPE:
+    if module_type in DICT_MODULE_TYPES.keys():
         improt_module = getattr(hashlib, '{}'.format(module_type))
     else:
-        print 'The `{}` does not exist in the list module!\nPlease try this:'.format(module_type)
-        print LIST_MODULES_TYPE
+        print '\n The `{}` does not exist in the list module!\n Please try this: {}\n'.format(module_type, DICT_MODULE_TYPES.keys())
+        sys.exit()
+    if min_length > max_length:
+        print '\n Min-length must be longer than Max-length or as same as with Max-length.\n'
+        sys.exit()
+    if len(hashed) not in DICT_MODULE_TYPES.values():
+        print "\n Provided hash doesn't match any of known hashes bitmap."
+        print " Correct length for hases type:"
+        for k, i in sorted(DICT_MODULE_TYPES.iteritems()):
+            print ' -', k,':',i
+        print ''
+        sys.exit()
+    if choice == '-m' and len(hashed) != DICT_MODULE_TYPES[module_type]:
+        print "\n The hash `{}` is doesn't exist in `{}`.\n Please try another type!\n".format(hashed, module_type)
         sys.exit()
 
     end_result_chip = ''
@@ -64,10 +82,13 @@ def decrypter(choice, module_type, hashed, chrs, min_length, max_length):
                     print '   *** Please drink your coffee first! ***'
                     print '\t{} {}\n'.format(NAME, VERSION)
                     print 'CTRL+C to Exit!'
-                    if choice == '-a' and module_type not in LIST_MODULES_TYPE[0]:
-                        print 'Type Decrypt has been tried: {}'.format(LIST_MODULES_TYPE[:LIST_MODULES_TYPE.index(module_type)])
                     print 'Charachters to try : {}'.format(chrs)
-                    print 'Type Decrypt now   : {}'.format(module_type)
+                    print 'Min-length         : {}'.format(min_length)
+                    print 'Max-length         : {}'.format(max_length)
+                    if choice == '-a':
+                        print 'Type Decrypt found : {}'.format(module_type)
+                    else:
+                        print 'Type Decrypt now   : {}'.format(module_type)
                     print 'Trying with        : {} - {}'.format(result_chip, hash_chip)
                     time.sleep(0.01)
                     print("\033c")
@@ -75,16 +96,10 @@ def decrypter(choice, module_type, hashed, chrs, min_length, max_length):
         print 'Finished!\n'
         sys.exit()
 
-    if end_result_chip == '' and choice == '-m':
+    if end_result_chip == '':
         print 'Not Found!'
         print 'End time: {}\n'.format(time.strftime('%H:%M:%S'))
         sys.exit()
-    elif end_result_chip == '' and choice == '-a':
-        if module_type == LIST_MODULES_TYPE[-1]:
-            print 'Not Found!'
-            print 'End time: {}\n'.format(time.strftime('%H:%M:%S'))
-            sys.exit()
-        else: pass
     else: pass
 
 if __name__ == '__main__':
@@ -99,11 +114,12 @@ if __name__ == '__main__':
         except IndexError: print_help()
     elif sys.argv[1] == '-a':
         try:
-            for module_type in LIST_MODULES_TYPE:
-                if sys.argv[3] == '-c':
-                    decrypter(sys.argv[1], module_type, sys.argv[2], sys.argv[4], int(sys.argv[5]), int(sys.argv[6]))
-                elif sys.argv[3] == '-ac':
-                    decrypter(sys.argv[1], module_type, sys.argv[2], CHRS, int(sys.argv[4]), int(sys.argv[5]))
-                else: print_help()
+            len_hases = len(sys.argv[2])
+            module_type = DICT_MODULE_TYPES.keys()[DICT_MODULE_TYPES.values().index(len_hases)]
+            if sys.argv[3] == '-c':
+                decrypter(sys.argv[1], module_type, sys.argv[2], sys.argv[4], int(sys.argv[5]), int(sys.argv[6]))
+            elif sys.argv[3] == '-ac':
+                decrypter(sys.argv[1], module_type, sys.argv[2], CHRS, int(sys.argv[4]), int(sys.argv[5]))
+            else: print_help()
         except IndexError: print_help()
     else: print_help()

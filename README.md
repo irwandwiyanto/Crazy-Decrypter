@@ -45,10 +45,11 @@ $ crazy_decrypter -a 2f2ec1296695a9fb3251bbc94a2e0cef -c ichp 4 4
     Python Crazy Decrypter 0.0.3
 
 CTRL+C to Exit!
-Type Decrypt has been tried: ['sha1', 'sha224']
 Charachters to try : ichp
-Type Decrypt now   : md5
-Trying with        : ippc - 1ddae1fbbc4dcd27055140e831e2309d
+Min-length         : 3
+Max-length         : 4
+Type Decrypt found : md5
+Trying with        : iipc - 373fa60ea77f4695bc05fbc1b49d40e3
 ```
 
 ####Example Result
