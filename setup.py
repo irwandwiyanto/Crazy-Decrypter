@@ -4,7 +4,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name                = "Python Crazy Decrypter",
+    name                = "crazy_decrypter",
     version             = "0.0.3",
     url                 = 'https://github.com/agusmakmun/Crazy-Decrypter/',
     download_url        = 'https://github.com/agusmakmun/Crazy-Decrypter/tarball/v0.0.3',
@@ -12,7 +12,7 @@ setup(
     license             = 'MIT',
     author              = 'Agus Makmun (Summon Agus)',
     author_email        = 'ags@dracos-linux.id',
-    packages            = find_packages(),
     keywords            = ['Crazy Decrypter', 'Python Crazy Decrypter'],
+    packages            = find_packages(),
     scripts             = ['crazy_decrypter'],
 )
